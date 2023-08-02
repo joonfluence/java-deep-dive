@@ -1,4 +1,4 @@
-package org.java_standard;
+package org.java_standard.lesson_7;
 
 class OuterClass {
     int iv = 0;

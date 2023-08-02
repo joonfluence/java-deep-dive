@@ -1,14 +1,14 @@
 package org.example;
 
-public class DefaultPostBuilder implements PostBuilder{
+public class Post implements PostBuilder{
     private String title;
     private String content;
     private String author;
 
-    public DefaultPostBuilder(){}
+    public Post(){}
 
-    public DefaultPostBuilder builder(){
-        return new DefaultPostBuilder();
+    static Post builder(){
+        return new Post();
     }
 
     @Override
@@ -29,7 +29,7 @@ public class DefaultPostBuilder implements PostBuilder{
         return this;
     }
 
-    public DefaultPostBuilder build(){
+    public Post build(){
         return this;
     }
 
@@ -44,4 +44,15 @@ public class DefaultPostBuilder implements PostBuilder{
     public String getAuthor(){
         return this.author;
     }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+    public void setContent(String content){
+        this.content = content;
+    }
+    public void setAuthor(String author){
+        this.author = author;
+    }
+
 }
