@@ -1,4 +1,4 @@
-package org.example;
+package org.example.synchronization;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
@@ -24,7 +24,6 @@ public class SyncTest {
         threadA.start();
         threadB.start();
         threadC.start();
-
     }
 
     private synchronized void syncMethod1(String msg){
