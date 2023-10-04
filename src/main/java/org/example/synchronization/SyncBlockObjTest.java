@@ -39,11 +39,8 @@ public class SyncBlockObjTest {
         });
 
         thread1.start();
-        sleep(1000);
         thread3.start();
-
         thread2.start();
-        sleep(1000);
         thread4.start();
     }
 

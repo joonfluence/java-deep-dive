@@ -3,17 +3,18 @@ package org.example.synchronization;
 import java.time.LocalDateTime;
 
 public class VolatileTest {
-
-    private static boolean stopRequested;
+    private volatile static boolean stopRequested;
 
     public static void main(String[] args) throws InterruptedException {
+        sync();
+    }
+
+    private static void sync() throws InterruptedException {
         System.out.println("start = " + stopRequested + LocalDateTime.now());
         Thread backgroundThread = new Thread(() -> {
-            Integer i = 0;
+            int i = 0;
             while (!stopRequested) {
-                synchronized (i){
-                    i++;
-                }
+                i++;
             }
         });
         backgroundThread.start();
