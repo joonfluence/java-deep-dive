@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.grammar.thread.MemoryUserProfileRepository;
+import org.grammar.thread.UserProfile;
 
 import java.util.Optional;
 

@@ -3,8 +3,6 @@ package org.datastructure.hashtable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Hashtable;
-
 public class HashTableTest {
 
     @Test
