@@ -1,4 +1,4 @@
-package org.design_pattern.lesson_7.lesson_7;
+package org.design_pattern.lesson_7;
 
 class FighterTest {
     public static void main(String[] args) {
