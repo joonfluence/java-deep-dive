@@ -1,15 +1,21 @@
 package org.grammar.thread;
 
-public class Main {
-    public static void main(String[] args) {
-        String a = "hello";
-        String b = "hello";
-        String c = new String("hello");
-        String d = new String("hello");
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
-        System.out.println(a == b);
-        System.out.println(b == c);
-        b.intern();
-        System.out.println(c == d);
+public class Main {
+    public void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+        MyThread t3 = new MyThread();
+        MyThread t4 = new MyThread();
+
+        t1.run();
+        t2.run();
+        t3.run();
+        t4.run();
     }
 }
+
